@@ -1,9 +1,9 @@
 // 人口推移の取得
 
-import { GET_POPULATION_CONFIGURATION_URL } from "./ResasApi"
+import { API_KEY, GET_POPULATION_CONFIGURATION_URL } from "./ResasApi"
 
 const header = {
-    'X-API-KEY':process.env.RESAS_API_KEY as string
+    'X-API-KEY':API_KEY || ""
 } as const 
 
 

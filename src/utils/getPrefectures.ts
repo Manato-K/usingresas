@@ -1,10 +1,9 @@
 //都道府県コードの取得
-
-import { GET_PREFECURES_URL } from "./ResasApi"
+import { API_KEY, GET_PREFECURES_URL } from "./ResasApi"
 
 const header = {
-    'X-API-KEY':process.env.RESAS_API_KEY as string
-} as const
+    'X-API-KEY':API_KEY || ""
+}
 
 export type prefectures = {
     massage: null
@@ -17,6 +16,7 @@ export type prefectures = {
 
 
 export const getPrefecures = async ():Promise<prefectures[]> => {
+    console.log(API_KEY)
     const result = await fetch(
         GET_PREFECURES_URL,
         {
