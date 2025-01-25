@@ -27,7 +27,7 @@ export default function Home() {
 
   useEffect(() => {
     
-    getPrefecures().then((result) => {
+    getPrefecures().then((result:any) => {
       // fix 型を修正する
       setPrefectuers(result)
     })
